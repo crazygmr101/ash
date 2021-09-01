@@ -16,6 +16,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 """
 import asyncio
 import os
+import dotenv
 from typing import OrderedDict
 
 import expiringdict  # noqa
@@ -24,6 +25,8 @@ import restcord  # noqa
 
 import generation
 
+
+dotenv.load_env()
 lock = asyncio.Lock()
 rc = restcord.RestCord(token=os.getenv("TOKEN"))
 app = quart.Quart(import_name=__name__)
