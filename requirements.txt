@@ -2,3 +2,4 @@ restcord.py~=0.0.6
 quart
 expiringdict
 Pillow
+python-dotenv
