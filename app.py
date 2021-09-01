@@ -26,7 +26,7 @@ import restcord  # noqa
 import generation
 
 
-dotenv.load_env()
+dotenv.load_dotenv()
 lock = asyncio.Lock()
 rc = restcord.RestCord(token=os.getenv("TOKEN"))
 app = quart.Quart(import_name=__name__)
